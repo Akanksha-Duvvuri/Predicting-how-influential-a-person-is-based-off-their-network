@@ -1,0 +1,48 @@
+1. The idea is to analyze and understand the fundamentatl structure of intricate networks.
+This would help in acquiring invaluable(extremely useful) insights and facilitate astute decision making processes
+
+This would also help personalize, target inventions, optimize system performance etc etc
+
+2. What exactly is the problem statemenet?
+    This project aims to harness the power of machine learning techniques to delve into the intricate
+    world of graph analysis, specifically focusing on clustering based on the local properties of
+    nodes. The primary objective is to discern and group nodes within a given graph that exhibit
+    shared structural properties, thus uncovering cohorts of individuals with similar characteristics or
+    interests. This endeavor holds tremendous potential across various domains, be it for targeted
+    marketing endeavors, community detection initiatives, or the deeper comprehension of complex
+    social dynamics.
+
+
+3. introduction
+
+Local and global features are both valuable for extracting insights from graph data.
+
+local features are easy to extract 
+
+By focusing on individual nodes and their immediate surroundings, local features involve less computational complexity compared to analyzing the entire graph structure. 
+
+We can build versatile applications for graph analysis by extracting and analyzing the structural properties of nodes and their neighborhoods.
+
+They can be utilized for tasks such as node classification, link prediction, anomaly detection, community detection, and graph generation.
+
+
+The objective is to employ clustering algorithms on these features to
+uncover relationships between nodes, identifying patterns, similarities, and potential connections.
+
+
+ego networks are sub networks focused on a single central individual (ego) and the people they connect with are called alters
+
+the connections between ego and alters are called ties
+
+
+Files:
+
+nodeId.edges : The edges in the ego network for the node 'nodeId'. Edges are undirected for facebook, and directed (a follows b) for twitter and gplus. The 'ego' node does not appear, but it is assumed that they follow every node id that appears in this file.
+
+nodeId.circles : The set of circles for the ego node. Each line contains one circle, consisting of a series of node ids. The first entry in each line is the name of the circle.
+
+nodeId.feat : The features for each of the nodes that appears in the edge file.
+
+nodeId.egofeat : The features for the ego user.
+
+nodeId.featnames : The names of each of the feature dimensions. Features are '1' if the user has this property in their profile, and '0' otherwise. This file has been anonymized for facebook users, since the names of the features would reveal private data.
