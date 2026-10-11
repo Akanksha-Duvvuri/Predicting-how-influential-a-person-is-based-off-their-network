@@ -4,13 +4,7 @@ This would help in acquiring invaluable(extremely useful) insights and facilitat
 This would also help personalize, target inventions, optimize system performance etc etc
 
 2. What exactly is the problem statemenet?
-    This project aims to harness the power of machine learning techniques to delve into the intricate
-    world of graph analysis, specifically focusing on clustering based on the local properties of
-    nodes. The primary objective is to discern and group nodes within a given graph that exhibit
-    shared structural properties, thus uncovering cohorts of individuals with similar characteristics or
-    interests. This endeavor holds tremendous potential across various domains, be it for targeted
-    marketing endeavors, community detection initiatives, or the deeper comprehension of complex
-    social dynamics.
+    This project aims to harness the power of machine learning techniques to delve into the intricate world of graph analysis, specifically focusing on clustering based on the local properties of nodes. The primary objective is to discern and group nodes within a given graph that exhibit shared structural properties, thus uncovering cohorts of individuals with similar characteristics or interests. This endeavor holds tremendous potential across various domains, be it for targeted marketing endeavors, community detection initiatives, or the deeper comprehension of complex social dynamics.
 
 
 3. introduction
@@ -46,3 +40,33 @@ nodeId.feat : The features for each of the nodes that appears in the edge file.
 nodeId.egofeat : The features for the ego user.
 
 nodeId.featnames : The names of each of the feature dimensions. Features are '1' if the user has this property in their profile, and '0' otherwise. This file has been anonymized for facebook users, since the names of the features would reveal private data.
+
+
+
+4. graph_communities.png ---> a picture of the whole network
+Dots(nodes) - individual entities
+lines(edges) - connections bw those entities
+
+colors - diff communities detected by the algorithm
+
+
+Code uses leiden community detection algorithm to group nodes that have relatively dense connections within their group compared with connections outside it.
+
+node_id	The original ID of the node in your dataset.
+degree	Number of nodes directly connected to it.
+clustering_coefficient	How interconnected its immediate neighbors are.
+mean_neighbor_degree	Average number of connections belonging to its neighbors.
+two_hop_reachable_count	Number of distinct other nodes reachable within two edges.
+coreness	How deeply the node belongs to a densely interconnected core.
+betweenness	How often the node lies on shortest paths between other nodes.
+pagerank	A measure of importance based on the connections and importance of neighboring nodes.
+community_id	The community assigned to the node by Leiden.
+community_size	Number of nodes in that node's community.
+
+
+---> so facebook_combined.txt is the original dataset (original list of edges)
+
+using python igraph - build the graph and calc its structure
+
+graph_communities -> helps visualise the network and see the communities
+node_features.csv -> helps study the numbers
