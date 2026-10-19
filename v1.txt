@@ -70,3 +70,5 @@ using python igraph - build the graph and calc its structure
 
 graph_communities -> helps visualise the network and see the communities
 node_features.csv -> helps study the numbers
+
+
